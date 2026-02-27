@@ -1,17 +1,14 @@
 import java.util.Scanner;
-public class PalindromeCheckerApp {
+
+public class PalindromeReverse {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
         System.out.print("Input text: ");
         String str = sc.nextLine();
 
-        String reversed = "";
-
-        // Reverse the string
-        for (int i = str.length() - 1; i >= 0; i--) {
-            reversed += str.charAt(i);
-        }
+        // Reverse using StringBuilder
+        String reversed = new StringBuilder(str).reverse().toString();
 
         // Check palindrome
         if (str.equalsIgnoreCase(reversed)) {
